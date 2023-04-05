@@ -38,3 +38,12 @@ console.log("boolean-question - > ", true-1); //0
 console.log("boolean-question - > ", true-false); //1
 console.log("boolean-question - > ", true-"1"); //this "1" treated as boolean o/p :- 0
 console.log("boolean-question - > ", "1" + true); //1true
+
+console.log("-------Symbol Example----------")
+
+const id = Symbol("id");
+const info ={
+    name:"Juhi",
+    [id]:123, // Symbol id for unique
+}
+console.log("info ->",info)
