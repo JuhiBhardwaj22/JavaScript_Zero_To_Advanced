@@ -9,13 +9,17 @@ const obj = {
 }
 getUserinfo(obj)
 
+
+
 //The syntax that we used before is called a Function Declaration:
 function sayHi() {
     console.log( "This is Function Declaration" );
   }
   sayHi();
 
-  //There is another syntax for creating a function that is called a Function Expression.
+
+
+//There is another syntax for creating a function that is called a Function Expression.
   let sayHello = function() {
     console.log( " Function Expression" );
   };
@@ -26,6 +30,7 @@ function sayHi() {
   text();
 
 
+  
   console.log("-----Arrow Funtion--------")
 
   let func = ({name,age,gender}) =>{
