@@ -5,7 +5,8 @@ Just like classes are used for creating objects in Java, C# we can use construct
 
 ## Objects can be created using the constructor function syntax using the following two steps:
 
-1. Define the object blueprint(class) by defining the constructor function. By convention, name of the constructor function should start with capital letter.
+1. Define the object blueprint(class) by defining the constructor function.
+ By convention, name of the constructor function should start with capital letter.
 
 2. Create the object by instantiating the constructor function using new operator.
 
