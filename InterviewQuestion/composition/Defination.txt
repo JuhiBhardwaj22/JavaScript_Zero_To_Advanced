@@ -1,0 +1,15 @@
+const functions = [
+  function(x) { return x + 1; },
+  function(x) { return x * 2; },
+  function(x) { return x - 3; }
+];
+You can access any element of the array using its index, which starts from 0. For example, functions[0] will give you the first function, functions[1] will give you the second function, and so on.
+
+To call a function that is stored in an array, you need to use parentheses and pass the argument(s) that the function expects. For example, functions[0](x) will call the first function with the argument x and return x + 1. Similarly, functions[1](x) will call the second function with the argument x and return x * 2, and functions[2](x) will call the third function with the argument x and return x - 3.
+
+So, in general, functions[i](x) means calling the function at index i of the array functions with the argument x.
+
+
+Function composition is an approach where the result of one function is passed 
+on to the next function, which is passed to another until the final function is executed for the 
+final result. Function compositions can be composed of any number of functions
