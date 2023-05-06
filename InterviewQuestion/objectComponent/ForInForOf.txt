@@ -1,0 +1,28 @@
+How to iterate over an object?
+---------------------------------
+
+
+We can use “for in loop” to iterate over an object but there’s a catch “for in” will iterate 
+the whole prototype chain meaning if there’s a key which you are looking for is not on your object but
+ it is in your prototype chain it will return it and it’s a costly operation because this loop will iterate
+  the prototype chain which you didn’t want we only want to iterate our the object not the whole prototype 
+  chain right?
+
+
+
+
+Second option is we can use Object.keys or values which is aham.. 
+okay like we can use it but whats the catch? If we use Object.keys then we will get the keys and 
+we can get the value by passing obj[key] which is okay but there’s a better intuitive option which 
+I’ll explain later another thing is if we use Object.values we will get the values only so whats the better solution if we want keys and values?
+
+
+
+“Object.entries” Bingo!!
+
+Object.Entries we can iterate over an object by using Object.entries in “for of loop” in which we can 
+destructure the key and value pair that is the intuitive one doesn’t?
+
+Note: Another approach is using symbol.iterator with generator function in that approach 
+we can iterate any object without using any object methods but this approach is little bit advanced 
+sand it’s not that intuitive that’s why I didn’t mention here.
