@@ -81,6 +81,6 @@ console.log(array3.includes(2));
 const pets = ["cat", "dog", "bat", "ctat"];
 
 console.log(pets.includes("cat", 2));
-// Expected output: true
+// Expected output: false
 
 console.log(pets.includes("at"));

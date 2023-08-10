@@ -12,6 +12,10 @@ console.log("genObj->", genObj.next());
 console.log("genObj->", genObj.next());
 console.log("genObj->", genObj.next());
 
+for (let obj of genObj) {
+  console.log("obj", obj);
+}
+
 //Example 2: This example code to print infinite series of natural numbers using a simple generato
 
 function* getNaturalNums() {
@@ -31,6 +35,7 @@ for (let i = 0; i < 10; i++) {
 
 //Another example
 const arr = ["a", "b", "c"];
+//only array will be iterable
 
 function* generator() {
   yield 1;

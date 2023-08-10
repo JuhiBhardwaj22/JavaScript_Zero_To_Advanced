@@ -10,7 +10,7 @@ console.log("at->", str.at(100)); // undefined
 
 const charStr = "Hello Juhi welcome to the .at method";
 
-console.log("charAt->", charStr.charAt(2));
+console.log("charAt->", charStr.charAt(2)); //l
 console.log("charAt->", charStr.charAt(-1)); // empty value
 console.log("charAt->", charStr.charAt(100)); // empty value
 
@@ -56,8 +56,9 @@ console.log("Indexof ->", sentence.indexOf("juhi")); //-1
 
 const myString = "javascript t is rox juhi test is values";
 
-console.log("lastIndexOf ->", myString.lastIndexOf("is")); //28 last index
-console.log("lastIndexOf ->", myString.lastIndexOf("is", 6)); //-1 because it will try to search the "is " or string less thean index 6
+console.log("lastIndexOf ->", myString.lastIndexOf("is")); //30 last index
+console.log("lastIndexOf ->", myString.lastIndexOf("is", 6)); //-1 because it will try to search the
+//"is " or string less thean index 6
 
 const myString1 = "is my is juhi java is";
 console.log("lastIndexOf ->", myString1.lastIndexOf("is", 11)); //6
@@ -77,7 +78,7 @@ console.log("Trim ->", strTrim.trim());
 
 //10  repeat()
 var string = "Welcome to Edureka";
-console.log(string.repeat(2));
+console.log(string.repeat(3));
 
 //11 Slic()
 

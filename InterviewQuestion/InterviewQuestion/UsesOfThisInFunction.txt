@@ -1,0 +1,10 @@
+1. In JavaScript, the keyword this is a special identifier that refers to the context in which a function is 
+   executed. The value of this can vary depending on how the function is invoked. Here are the common uses of 
+    this inside functions and methods in JavaScript:
+
+Method context: When a function is defined as a method within an object, this refers to the object itself. 
+                It allows the method to access and manipulate the object's properties and other methods. 
+                For example:
+
+
+

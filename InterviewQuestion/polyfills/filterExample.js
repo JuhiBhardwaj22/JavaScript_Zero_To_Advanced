@@ -27,7 +27,6 @@ console.log("getAlbums", getAlbums);
 Array.prototype.myFilter = function (callBackFunction) {
   let newArray = [];
   for (let i = 0; i < this.length; i++) {
-    console.log("this", this);
     if (callBackFunction(this[i])) {
       newArray.push(this[i]);
     }

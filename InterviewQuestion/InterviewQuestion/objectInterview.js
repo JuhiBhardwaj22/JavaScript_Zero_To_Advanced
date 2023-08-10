@@ -16,6 +16,10 @@ copyObj.address.city = "Panipat";
 console.log("Original Object ->", obj);
 console.log("Deep copy Object ->", copyObj);
 
+//object.assign()
+
+//this will not do nested deep copy
+const copyObj = Object.assign({}, obj);
 //Delete keyword
 
 const obj1 = {
@@ -77,7 +81,7 @@ let obj2 = {
   },
 };
 //in this case this will point to the global object instead of intended object
-
+//obj2.printName -> in this case this will refer to intended object
 let fn = obj2.printName;
 fn(); //Output will be undefined
 

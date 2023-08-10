@@ -53,7 +53,6 @@ console.log("after update data", data);
 
 //--------------------Example -3 --------------------------------------------//
 
-//In primitive it will not change the value
 let x = 2;
 let y = x;
 y = 3;

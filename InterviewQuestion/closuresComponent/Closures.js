@@ -8,6 +8,19 @@ function main() {
 }
 main();
 
+var count = 0;
+function main(x) {
+  count = count + x;
+  function inner() {
+    console.log("count - >", count);
+  }
+  inner();
+}
+
+main(1);
+main(1);
+main(1);
+
 function adder(num) {
   function add(num2) {
     console.log(num + num2);

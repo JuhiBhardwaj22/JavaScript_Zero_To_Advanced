@@ -10,6 +10,7 @@ console.log("default oder Ascending Sort String ->", strArr.sort());
 const arr1 = [5, 2, 1, 4, 6, 0, 7, 8, 3];
 const newSortedArr = arr1.sort((a, b) => (a > b ? -1 : 1)); //[]
 console.log("newSortedArr", newSortedArr);
+
 const newSortedArr1 = arr1.sort((a, b) => (a > b ? 1 : -1));
 console.log("newSortedArr ->", newSortedArr1);
 

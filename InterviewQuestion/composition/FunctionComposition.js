@@ -10,7 +10,8 @@ const mulRes = mul(addRes);
 console.log("mulRes", mulRes);
 
 //compose function
-
+///-----------------What is Composition
+//Composition simply means the combination of two or more functions to form a new function. When you compose two functions, you apply one function to the output of the other function.
 function Compose(...funs) {
   return function (x) {
     return funs.reduceRight((y, f) => f(y), x);
@@ -38,3 +39,19 @@ console.log("finalComposeES6", finalComposeES6);
 
 const finalComposeForLoop = Compose2([sub, add, mul])(4);
 console.log("finalComposeForLoop", finalComposeForLoop);
+
+function compose(allFun) {
+  return function (x) {
+    console.log("x ->", x);
+    let result = 0;
+    for (let i = 0; i < allFun.length; i++) {
+      console.log("allFun[i](x)", allFun[i](x));
+      result = result + allFun[i](x);
+      console.log("res", result);
+    }
+    return result;
+  };
+}
+
+let compFun = compose([add, mul, sub])(4);
+console.log("compFun", compFun);

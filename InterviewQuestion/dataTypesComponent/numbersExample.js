@@ -14,7 +14,9 @@ console.log("typeof isNaN ->", typeof isNaN); // function
 
 console.log("typeof -Infinity ->", typeof -Infinity); // number
 
-console.log("typeof NaN ->", typeof typeof NaN); // function
+console.log("typeof Nan ->", typeof NaN); //number
+
+console.log("typeof NaN typeof ->", typeof typeof NaN); // string
 
 console.log("compare NaN == NaN", NaN == NaN); // false
 
@@ -28,4 +30,4 @@ console.log("typeof nan", isNaN(NaN)); //true
 
 console.log("typeof nan", isNaN(123)); //false
 
-console.log("Not-A-Number.", typeof NaN);
+console.log("Not-A-Number.", typeof NaN); //number

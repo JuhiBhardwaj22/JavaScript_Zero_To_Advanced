@@ -17,3 +17,14 @@ function displayList(list) {
 }
 
 displayList(playList);
+
+//the setTimeout() function creates its own scope
+//this will refer the Global Object
+function greetsetTimeout() {
+  let name = "Mahi";
+  setTimeout(function () {
+    console.log("mname own scope-- >", name);
+    console.log("inside callback function ->", this.name);
+  }, 500);
+}
+greetsetTimeout.call({ name: "Juhi" });
