@@ -13,8 +13,11 @@ Objects have better performance and are easier to create.
 
 
 => Benefits of Sets over Arrays
-Arrays and sets are both data structures used for storing collections of elements. But sets have a slight edge over arrays because of:
+Arrays and sets are both data structures used for storing collections of elements.
+ But sets have a slight edge over arrays because of:
 
-Uniqueness: With a set, duplicates are removed to reduce the size of the data structure (unlike an array which stores duplicates).
-Manipulating collections: It is easy to combine a set with other sets to perform various operations like intersections, unions, and differences.
+Uniqueness: With a set, duplicates are removed to reduce the size of the data structure 
+(unlike an array which stores duplicates).
+Manipulating collections: It is easy to combine a set with other sets to perform various operations
+ like intersections, unions, and differences.
 Performance: Because of the implementation using hash tables, set offers faster lookups and membership tests

@@ -36,8 +36,13 @@ console.log("boolean-question - > ", false - 1); //-1
 console.log("boolean-question - > ", true - 1); //0
 console.log("boolean-question - > ", true - false); //1
 console.log("boolean-question - > ", true - "1"); //this "1" treated as boolean o/p :- 0
+
+//In this case, the true value is converted to the string "true" and then concatenated with the string "1".
 console.log("boolean-question - > ", "1" + true); //1true // this will be treated as string
+
 console.log("boolean-question - > ", false - "1"); // o/p : -1
+
+//when you use the - operator, JavaScript doesn't perform string concatenation. Instead, it performs numeric operations. The - operator is used for subtraction
 console.log("boolean-question - > ", "2" - false); //o/p: 2 , in case of false it will act as 0
 
 console.log("-------Symbol Example----------");

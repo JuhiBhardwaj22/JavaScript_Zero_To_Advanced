@@ -18,6 +18,7 @@ console.log("typeof Nan ->", typeof NaN); //number
 
 console.log("typeof NaN typeof ->", typeof typeof NaN); // string
 
+//NaN is considered to be a distinct and unique value in JavaScript, and it has the unusual property that it is not equal to itself
 console.log("compare NaN == NaN", NaN == NaN); // false
 
 console.log("compare NaN === NaN", NaN === NaN); //false

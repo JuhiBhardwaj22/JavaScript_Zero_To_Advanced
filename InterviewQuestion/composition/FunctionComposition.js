@@ -53,5 +53,16 @@ function compose(allFun) {
   };
 }
 
+//Compose example
 let compFun = compose([add, mul, sub])(4);
 console.log("compFun", compFun);
+
+const newFunction = compose(add, mul);
+const result = newFunction(2);
+function compose(func1, func2) {
+  return function (args) {
+    return func1(func2(args));
+  };
+}
+
+console.log("newFunction", result);

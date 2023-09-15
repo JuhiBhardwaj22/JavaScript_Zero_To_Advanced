@@ -17,3 +17,10 @@ So, in general, functions[i](x) means calling the function at index i of the arr
 Function composition is an approach where the result of one function is passed 
 on to the next function, which is passed to another until the final function is executed for the 
 final result. Function compositions can be composed of any number of functions
+
+
+In JavaScript, a "pipe" typically refers to a concept or pattern used for function composition, 
+similar to what we discussed earlier.
+ Function composition is a technique where you combine multiple functions 
+to create a new function that processes data sequentially. However, instead of calling one function and passing 
+its result to the next, you "pipe" the data through a series of functions in a left-to-right fashion.

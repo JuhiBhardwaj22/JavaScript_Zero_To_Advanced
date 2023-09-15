@@ -28,7 +28,6 @@ function* getNaturalNums() {
 let numsObj = getNaturalNums();
 // Loop to print the first
 // 10 Generated number
-console.log("nums", numsObj);
 for (let i = 0; i < 10; i++) {
   console.log("nums", numsObj.next().value);
 }

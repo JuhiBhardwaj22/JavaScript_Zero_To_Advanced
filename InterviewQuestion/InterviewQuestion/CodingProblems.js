@@ -19,7 +19,7 @@ const unique1 = arr.forEach((items, index) => {
 console.log(objArr);
 
 //2. Find the frequency of element in array
-const arrList = [1, 2, 3, 4, 5, 5, 2, 3, 6, 2];
+const arrList = [1, 2, 3, 4, 5, 5, 2, 3, 6, 2, 100];
 let freList = {};
 arrList.forEach((elm) => {
   if (freList[elm]) {
@@ -100,3 +100,49 @@ const getBookList = bookList.reduce((acc, curr) => {
 }, []);
 
 console.log("getBookList", getBookList);
+
+//Sort
+// /Certainly! This question is asking you to create a function that takes an array arr
+//and a sorting function fn as inputs.
+//The goal is to return a new array sortedArr that contains the elements of the original array arr,
+// sorted in ascending order based on the output of the function fn.
+function sortByFunction(arr, fn) {
+  const sortedArr = [...arr]; // Create a copy of the original array
+
+  sortedArr.sort((a, b) => {
+    const resultA = fn(a);
+    const resultB = fn(b);
+    return resultA - resultB; // Sort in ascending order based on fn output
+  });
+
+  return sortedArr;
+}
+
+// Example usage:
+const inputArray = [4, 2, 7, 1, 5];
+const sortingFunction = (num) => num * 2;
+
+const sortedArray = sortByFunction(inputArray, sortingFunction);
+console.log(sortedArray); // Output: [1, 2, 4, 5, 7]
+
+//1  -> Function to find the missing number in an unsorted array
+function findMissingNumber(arr, n) {
+  // Calculate the sum of numbers from 1 to n (inclusive)
+  const expectedSum = (n * (n + 1)) / 2;
+
+  // Calculate the sum of the elements in the array
+  const actualSum = arr.reduce((sum, num) => sum + num, 0);
+
+  // Find the missing number by subtracting the actual sum from the expected sum
+  const missingNumber = expectedSum - actualSum;
+
+  return missingNumber;
+}
+
+// Example array with one missing number
+const unsortedArray = [3, 7, 1, 2, 8, 4, 5, 6, 10, 9]; // Numbers from 1 to 10 with 1 missing
+
+// Calculate the missing number
+const missingNumber = findMissingNumber(unsortedArray, 10); // 10 is the expected total count
+
+console.log(`The missing number is: ${missingNumber}`);

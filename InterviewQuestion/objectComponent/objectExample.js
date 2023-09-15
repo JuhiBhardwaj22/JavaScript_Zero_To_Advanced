@@ -75,3 +75,38 @@ function multiplyNumeric(obj) {
   }
 }
 multiplyNumeric(menu);
+
+const data = [
+  { name: "Juhi", age: 30 },
+  { name: "Alice", age: 25 },
+  { name: "Job", age: 28 },
+];
+
+const optimezData = data.map((person) => ({
+  ...person,
+  ageGroup: person.age > 27 ? "Adult" : "Young",
+  greeting: person.age > 27 ? `Helooo thnaks: - ${person.name}` : "",
+}));
+
+console.log("optimezData", optimezData);
+
+//Interview question
+//The curly braces {} are used to define the body of the arrow function,
+//and you're returning a JSX element (<div></div>) for each item in the array.
+objectvalue.map((item) => {
+  return <div></div>;
+});
+
+//2
+//This syntax { ...person } is a concise way of creating a new object with all the properties and values of the original person object.
+
+//Here's why the round brackets are important:--
+// When you're using an arrow function to return an object literal directly
+//, you need to wrap the object literal in parentheses. Otherwise, JavaScript might interpret the curly braces as the start
+//of a block of code for the function body instead of an object literal.
+
+//So, the round brackets around { ...person } in (person) => ({ ...person }) are used to indicate that you're
+// returning an object literal, and not defining a block of code for the function body.
+const optimezDataq = data.map((person) => ({
+  ...person,
+}));

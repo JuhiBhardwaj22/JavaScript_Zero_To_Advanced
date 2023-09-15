@@ -12,8 +12,10 @@ let user = {
 
 setTimeout(user.sayHi, 1000); //FirstName undefined
 
-//That’s because setTimeout got the function user.sayHi, separately from the object. The last line can be rewritten as:
-//that is the reason it will go only into sayHi funtion and then try to search firstName into global object
+//That’s because setTimeout got the function user.sayHi, separately from the object.
+// The last line can be rewritten as:
+//that is the reason it will go only into sayHi funtion and
+// then try to search firstName into global object
 let f = user.sayHi;
 setTimeout(f, 1000); // lost user context
 

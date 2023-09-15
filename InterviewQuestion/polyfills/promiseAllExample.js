@@ -3,7 +3,8 @@
 // 2 pending
 // 3 rejected
 
-//Promise.all :- takes an iterable of promises as input and returns a single Promise . This returned promise fulfills when all of the input's promises fulfill
+//Promise.all :- takes an iterable of promises as input and returns a single Promise .
+// This returned promise fulfills when all of the input's promises fulfill
 
 const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -22,19 +23,20 @@ const rejectPromise = Promise.reject("Rejected Promises");
 // Return array of results of input promises
 // Wait for all promises to be resolved or any to be rejected
 // You will not get result if any of promise is rejected.
-
+var test = Promise.all([promise1, promise2, promise3]);
+console.log("test ->>>>>>>>>>>>", test);
 Promise.all([promise1, promise2, promise3])
-  .then((result) => console.log(result))
+  .then((result) => console.log("wow  sucesss!!", result))
   .catch((error) => console.log(error));
 
 //IF any of the promise will reject then we will get rejected error whatever we want to show
 Promise.all([promise1, promise2, promise3, rejectPromise])
   .then((result) => console.log(result))
-  .catch((error) => console.log(error));
+  .catch((error) => console.log("Error ->", error));
 
 console.log("-----Polyfill of Promise.all-------------");
-//Polyfill for Promise.all
 
+//Polyfill for Promise.all
 Promise.myAll = function (arrOfPromise) {
   return new Promise((resolve, reject) => {
     let counter = 0;

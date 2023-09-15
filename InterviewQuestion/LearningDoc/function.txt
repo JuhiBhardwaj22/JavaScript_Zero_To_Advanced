@@ -1,0 +1,62 @@
+1. Function Statement and Function Decalration
+
+function a(){
+    console.log("Data")
+}
+
+calling the function  -> a();
+2. Function Exprssion
+
+var func = function(){
+    console.log("Data")
+}
+
+calling the function  -> func()
+
+
+But if call the both the  function even before creating it , in that case :
+   1. Statement function will excute and it get memory
+   2. But for function Exprssion will throw error because it will act as a variable and will get undefined Error 
+
+
+
+3. Anonymous Function
+var func = function(){
+    console.log("Data")
+}
+
+4. Named Function Exprssion
+
+var func = function xyz(){
+    console.log("Data")
+}
+
+xyz() -> get refernce error
+
+
+Parameter and Argument
+
+this is called Parameter
+function abc(params1,params2){
+
+}
+
+This is Called Argument
+
+abc(args1,args2)
+---------------------------------------------------------------------
+
+Fisrt Class Function
+Ability of the function to use as a value and can be passed as a argument 
+and can be returned from the function this ability is known as first class function
+
+var b = function(param1){
+    return function axy(){
+
+    }
+}
+
+function a(){
+
+}
+console.log(b(a))

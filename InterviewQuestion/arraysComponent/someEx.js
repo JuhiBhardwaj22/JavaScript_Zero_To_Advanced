@@ -18,7 +18,6 @@ const employees = [
 let indexValue;
 let newArr = employees.some(function (elm, index, arr) {
   const isFound = elm.name.indexOf("John") > -1;
-  console.log("found", isFound);
   if (isFound) {
     indexValue = index;
   }

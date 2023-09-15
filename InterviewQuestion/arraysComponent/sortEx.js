@@ -67,3 +67,5 @@ num1.sort((a, b) => {
 });
 
 console.log("compare function decending ->", num1); // decending order
+
+//

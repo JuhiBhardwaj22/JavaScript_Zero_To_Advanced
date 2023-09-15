@@ -8,9 +8,10 @@ let getVal = numbers.reduce(callBack);
 
 Array.prototype.myReduce = function (callBackFunction, initial) {
   //initial sum should be 0 thats why below logic written
+  console.log(this);
   let acc = initial !== "undefined " ? initial : this[0];
-  for (let i = 0; i < this.length; i++) {
-    acc = callBackFunction(acc, this[i]);
+  for (let curr of this) {
+    acc = callBackFunction(acc, curr);
   }
   return acc;
 };

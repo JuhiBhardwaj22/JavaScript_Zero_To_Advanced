@@ -17,14 +17,14 @@ console.log("getVal", getVal);
 Array.prototype.myMap = function (callBackFunction) {
   let newArray = [];
   console.log("this", this); // this will work as global object here
-  for (let i = 0; i < this.length; i++) {
-    console.log("this[i]", this[i]);
-    newArray.push(callBackFunction(this[i]));
+  for (let i of this) {
+    newArray.push(callBackFunction(i));
   }
 
   return newArray;
 };
 
 let getMyMapvalue = arr.myMap(getMultiple);
+//let getMyMapvalue = arr.myMap((elm) => elm * 10);
 
 console.log("getMyMapvalue", getMyMapvalue);

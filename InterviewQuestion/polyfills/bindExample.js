@@ -3,18 +3,13 @@ let userInfo = {
   email: "Juhi@gmail.com",
 };
 
-//Functiona expression
-
-let getUserinfo = function () {
-  console.log("userInfo", userInfo.name);
-};
-getUserinfo();
-
 //Bind method
 let getUserinfo1 = function () {
+  console.log("this ->", this);
   console.log("By using this", this.name);
 };
 let getMyName = getUserinfo1.bind(userInfo);
+console.log("getMyName", getMyName);
 getMyName();
 
 //Polyfill Example for Bind menthod
@@ -34,11 +29,13 @@ let printName = function (state, age, id) {
   );
 };
 Function.prototype.myBind = function (...args) {
-  let obj = this;
+  let functionCb = this;
+  console.log("args", args);
   let params = args.slice(1); //This willl remove first value of aaray and return all value
   return function (...agrs2) {
-    //[...params, ...args2] this will contcatenate all the value
-    obj.apply(args[0], [...params, ...agrs2]);
+    //args2 when we call this function and pass argument
+    //  [...params, ...args2] this will contcatenate all the value
+    functionCb.apply(args[0], [...params, ...agrs2]);
   };
 };
 

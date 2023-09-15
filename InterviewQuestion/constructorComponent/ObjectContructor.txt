@@ -1,7 +1,8 @@
 Object Constructor
 
 Constructor function in JavaScript is used for creating new objects using a blueprint.
-Just like classes are used for creating objects in Java, C# we can use constructors to create objects in JavaScript.
+Just like classes are used for creating objects in Java, 
+C# we can use constructors to create objects in JavaScript.
 
 ## Objects can be created using the constructor function syntax using the following two steps:
 
