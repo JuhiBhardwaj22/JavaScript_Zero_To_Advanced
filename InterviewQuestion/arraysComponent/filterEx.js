@@ -22,3 +22,8 @@ const newFilArr = arr.filter((elm, index, arr) => {
 });
 
 console.log("newFilArr", newFilArr);
+
+const value = arr.filter((elm, index, arr) => {
+  return arr.indexOf(elm) === index;
+});
+console.log("value", value);

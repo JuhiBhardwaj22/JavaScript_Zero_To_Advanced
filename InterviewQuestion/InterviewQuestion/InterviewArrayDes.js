@@ -9,9 +9,11 @@ const result = users.map((user) => {
   const [name, country, age] = user;
   //Destrutruing to get values of individual sub-array of the input
   console.log(name, country, age);
+
   //We can do by both return
   // return { name: name, country: country, age: age };
-  //If the key name and the variable name holding the value are the same then we can skip the colon and the variable name
+  //If the key name and the variable name holding the value are the same then
+  // we can skip the colon and the variable name
   return { name, age, country };
 });
 

@@ -55,6 +55,9 @@ let person = {
 let newPerson = Object.create(person);
 newPerson.name = "Mahi";
 newPerson.birthYear = 1996;
+newPerson.getInfo = function () {
+  console.log("Hello");
+};
 console.log("newPerson ", newPerson);
 console.log("object ->", newPerson.calCAge());
 

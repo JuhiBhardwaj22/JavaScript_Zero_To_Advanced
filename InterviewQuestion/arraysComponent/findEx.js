@@ -18,6 +18,7 @@ console.log("employees", employees);
 
 const newList = employees.find((list) => {
   console.log("index", list.name.indexOf("John"));
+  //incase of object it will check the value 0 and -1 . if the value is present then it will return 0 else -1
   return list.name.indexOf("John") > -1; // for john we get indexOf 0 thats why we added >-1 so that we will get john value
 });
 

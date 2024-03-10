@@ -51,3 +51,16 @@ console.log("pets1", pets1);
 
 dogy = null;
 console.log("pets1", pets1);
+
+let obj1 = [
+  {
+    name: "Juhi",
+  },
+  {
+    name: "Juhi",
+  },
+];
+
+const newSetobj = new WeakMap(obj1);
+
+console.log("newSet", newSetobj);

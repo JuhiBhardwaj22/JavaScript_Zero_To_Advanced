@@ -8,9 +8,11 @@ console.log("arr original ->", arr);
 console.log("default oder Ascending Sort String ->", strArr.sort());
 
 const arr1 = [5, 2, 1, 4, 6, 0, 7, 8, 3];
+//Descending
 const newSortedArr = arr1.sort((a, b) => (a > b ? -1 : 1)); //[]
 console.log("newSortedArr", newSortedArr);
 
+//Ascending
 const newSortedArr1 = arr1.sort((a, b) => (a > b ? 1 : -1));
 console.log("newSortedArr ->", newSortedArr1);
 
@@ -37,6 +39,12 @@ const items = [
 ];
 
 items.sort((a, b) => console.log("Itmes ->", a, b));
+const newV = items.sort((a, b) => a.value - b.value);
+
+console.log(newV);
+const newV1 = items.sort((a, b) => (a.value > b.value ? -1 : 1));
+
+console.log(newV1);
 
 const singleArr = [1, 4, 2, 5, 8];
 const points = [40, 100, 1, 5, 25, 10];

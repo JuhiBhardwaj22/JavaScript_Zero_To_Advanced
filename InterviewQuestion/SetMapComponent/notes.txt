@@ -5,8 +5,9 @@ Map vs Object – What's the Difference?
 With map, you can use any type (and values) as keys.
 Map provides better performance for large quantities of data.
 Use a map for better performance when adding and removing data frequently.
-When to use an object:
 
+
+When to use an object:
 Objects can only use numbers, strings, and symbols as keys.
 Objects are perfect for small to medium-sized sets of data.
 Objects have better performance and are easier to create.
@@ -21,3 +22,44 @@ Uniqueness: With a set, duplicates are removed to reduce the size of the data st
 Manipulating collections: It is easy to combine a set with other sets to perform various operations
  like intersections, unions, and differences.
 Performance: Because of the implementation using hash tables, set offers faster lookups and membership tests
+
+
+
+Map:
+
+When you use an object as a key in a Map, the Map holds a strong reference to that object.
+This strong reference means that even if you're not using that object anywhere else in your code,
+the Map is keeping it "alive" in memory.
+As a result, the object won't be considered garbage, and it won't be cleaned up by the garbage collector.
+
+
+WeakMap:
+
+In contrast, a WeakMap only holds a weak reference to its keys.
+If there are no other strong references to an object used as a key in a WeakMap, 
+that object might be considered eligible for garbage collection.
+This means that the WeakMap won't prevent the object from being cleaned up by 
+the garbage collector if there are no other references to that object.
+
+
+So, when we say "you don't want to prevent those objects from being cleaned up," 
+it means that using a WeakMap allows objects to be garbage collected if there are no other references to them. It's a way of saying, "Hey, I'm using this object to store some data, but if no one else cares about this object, feel free to clean it up." This can be beneficial in certain scenarios where you want to avoid memory leaks or unnecessary memory usage.
+
+
+
+
+Set:
+
+Think of it like a simple collection of unique items, where each item can be anything 
+(numbers, strings, objects).
+The items in a Set are strong references, meaning they stick around in memory even 
+if not used elsewhere in your code.
+You would use a Set when you want to keep a unique collection of items and you want those items to persist.
+
+WeakSet:
+
+Think of it like a special collection that only accepts objects as items.
+The items in a WeakSet are weak references, meaning they might be garbage collected 
+if there are no other strong references to them.
+You would use a WeakSet when you want to associate data with specific objects, 
+but you don't want to prevent those objects from being cleaned up by the garbage collector.

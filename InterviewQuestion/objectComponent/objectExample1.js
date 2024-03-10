@@ -58,3 +58,5 @@ let y = x;
 y = 3;
 console.log(x);
 console.log(y);
+
+//2 and 3

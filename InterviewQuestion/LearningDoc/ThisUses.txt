@@ -36,7 +36,8 @@ console.log(instance.property); // This will print 42
 4.Event Handlers and Callbacks:
 
 In event handlers and callbacks, the value of this can be tricky because it depends on how the function is invoked.
-Traditional functions used as event handlers can have a different this value. You might need to bind this explicitly or use arrow functions to maintain the expected context.
+Traditional functions used as event handlers can have a different this value. You might need to bind this explicitly 
+or use arrow functions to maintain the expected context.
 
 const myObject = {
     value: 42,
@@ -52,7 +53,8 @@ document.querySelector('button').addEventListener('click', myObject.handleClick.
 
 5.Arrow Functions:
 
-Arrow functions capture the this value from their surrounding lexical context (the context in which they are defined). This behavior makes them useful in callbacks and nested functions when you want to maintain a consistent this value.
+Arrow functions capture the this value from their surrounding lexical context (the context in which they are defined). 
+This behavior makes them useful in callbacks and nested functions when you want to maintain a consistent this value.
 
 const myObject = {
     value: 42,
@@ -66,4 +68,5 @@ myObject.handleClick();
 
 In summary, the behavior of this in JavaScript depends on the context in which a function is called.
  It can be the global object, the object the function is a method of, a newly created object (for constructors),
-  or something else. Arrow functions, however, have a fixed this context based on their surrounding lexical context. Understanding and managing this is crucial for writing effective JavaScript code.
+  or something else. Arrow functions, however, have a fixed this context based on their surrounding lexical context.
+   Understanding and managing this is crucial for writing effective JavaScript code.

@@ -65,7 +65,7 @@ function greetsetTimeout() {
   let name = "Mahi";
   setTimeout(function () {
     console.log("mname own scope-- >", name);
-    console.log("inside callback function ->", this.name);
+    console.log("inside callback function ->", this);
   }, 500);
 }
 greetsetTimeout.call({ name: "Juhi" });
@@ -148,6 +148,13 @@ const objThis = {
 };
 
 objThis.greetThis(); // logs "Hello, John!"
+
+//Certainly! The reason you're getting the Window object inside the helloFun function is due to
+//the way regular functions (function helloFun() {...}) handle the this keyword.
+
+//In JavaScript, when a regular function is called, the value of this is determined by how the
+//function is called, not where the function is defined. In your case, helloFun is called as a standalone
+//function within the greetThisFun method, so its this value is not automatically bound to the object (objThisFun) where it is defined.
 
 const objThisFun = {
   nameFun: "John",

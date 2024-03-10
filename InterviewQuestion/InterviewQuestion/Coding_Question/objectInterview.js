@@ -72,6 +72,26 @@ Object.defineProperty(person, "name", { configurable: false });
 delete person.name;
 console.log("configurable - false", person);
 
+const person1 = {};
+
+Object.defineProperties(person1, {
+  name: {
+    value: "John",
+    writable: true,
+    enumerable: true,
+    configurable: true,
+  },
+  age: {
+    value: 30,
+    writable: true,
+    enumerable: true,
+    configurable: true,
+  },
+});
+
+console.log(person1.name); // Output: John
+console.log(person1.age); // Output: 30
+
 //Binding issue
 
 let obj2 = {

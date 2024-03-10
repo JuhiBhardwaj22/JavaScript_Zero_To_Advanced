@@ -1,3 +1,8 @@
+//test
+const val = "Juhi";
+console.log("val", val);
+var atest = "Here";
+console.log(atest);
 const logicAlbums = [
   {
     name: "Bobby Tarantino",

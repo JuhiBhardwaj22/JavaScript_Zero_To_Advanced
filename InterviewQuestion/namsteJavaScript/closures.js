@@ -2,10 +2,8 @@ function a() {
   var x = 10;
   function b() {
     var y = 20;
-    console.log(x);
     function c() {
       var z = 200;
-      console.log(y);
     }
     c();
   }
@@ -91,7 +89,7 @@ const calculator = (function () {
     },
   };
 })();
-
+console.log("calculator", calculator);
 calculator.add(15);
 calculator.subtract(2);
 console.log("Result ->", calculator.getResult()); // 3
@@ -113,7 +111,6 @@ const mul = function () {
       console.log("Loading....");
       const total = n * 10;
       cache[n] = total;
-      console.log("cache", cache);
       return total;
     }
   };

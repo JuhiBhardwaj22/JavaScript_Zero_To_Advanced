@@ -36,6 +36,25 @@ console.log("obj1 with nested object", obj1);
 //The reason is that name is reference value while the first a is a primitive value
 //both source1 and obj1 references different objects but these objects reference the same name objects.
 
+const objt = { empName: "Test" };
+const objS = {
+  info: {
+    name: "Juhi",
+    id: {
+      emp: 1234,
+    },
+  },
+};
+
+const newT = Object.assign(objt, objS);
+
+console.log("newt->", newT);
+
+objS.info.name = "Mahi";
+
+console.log("test-> source", objS);
+console.log("target", objt);
+console.log("newt->", newT);
 //********************************Object.create *********************************//
 
 //1. Pass null

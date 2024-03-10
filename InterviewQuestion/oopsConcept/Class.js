@@ -48,3 +48,26 @@ console.log("emp ->", emp);
 
 emp.setPwd = "djshdhdbfb";
 console.log("emp ->", emp);
+
+//you can attach properties to the prototype of a class. When you attach a property to the prototype,
+// it becomes shared among all instances of that class. This is a common practice for adding methods to
+//a class that should be accessible to all instances.
+
+//Keep in mind that modifying the prototype affects all instances of the class,
+//so changes to the prototype are reflected in all existing and future instances of that class.
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// Attaching a method to the prototype
+Animal.prototype.makeSound = function () {
+  console.log("Some generic sound");
+};
+
+const cat = new Animal("Whiskers");
+const dog = new Animal("Buddy");
+
+cat.makeSound(); // Output: Some generic sound
+dog.makeSound(); // Output: Some generic sound

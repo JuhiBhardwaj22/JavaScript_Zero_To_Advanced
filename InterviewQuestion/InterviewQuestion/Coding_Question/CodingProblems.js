@@ -13,7 +13,7 @@ console.log("Original -arr", arr);
 //By using forEach loop
 
 let objArr = [];
-const unique1 = arr.forEach((items, index) => {
+arr.forEach((items, index) => {
   if (!objArr.includes(items)) return objArr.push(items);
 });
 console.log(objArr);
@@ -31,6 +31,11 @@ arrList.forEach((elm) => {
 });
 console.log("lisy ->", freList);
 
+const obj = {};
+for (let i of arrList) {
+  obj[i] ? obj[i]++ : (obj[i] = 1);
+}
+console.log("obj", obj);
 //Another approch by using for of loop
 
 const list = {};
@@ -124,25 +129,3 @@ const sortingFunction = (num) => num * 2;
 
 const sortedArray = sortByFunction(inputArray, sortingFunction);
 console.log(sortedArray); // Output: [1, 2, 4, 5, 7]
-
-//1  -> Function to find the missing number in an unsorted array
-function findMissingNumber(arr, n) {
-  // Calculate the sum of numbers from 1 to n (inclusive)
-  const expectedSum = (n * (n + 1)) / 2;
-
-  // Calculate the sum of the elements in the array
-  const actualSum = arr.reduce((sum, num) => sum + num, 0);
-
-  // Find the missing number by subtracting the actual sum from the expected sum
-  const missingNumber = expectedSum - actualSum;
-
-  return missingNumber;
-}
-
-// Example array with one missing number
-const unsortedArray = [3, 7, 1, 2, 8, 4, 5, 6, 10, 9]; // Numbers from 1 to 10 with 1 missing
-
-// Calculate the missing number
-const missingNumber = findMissingNumber(unsortedArray, 10); // 10 is the expected total count
-
-console.log(`The missing number is: ${missingNumber}`);

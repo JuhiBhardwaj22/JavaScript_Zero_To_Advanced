@@ -26,3 +26,21 @@ const newUserList = users.map((items) => {
 });
 
 console.log("newUserList ->", newUserList);
+
+// Using map with thisArg
+const person = {
+  name: "Juhi",
+  age: 30,
+  sayHello: function () {
+    console.log(
+      `Hello, my name is ${this.name} and I'm ${this.age} years old.`
+    );
+  },
+};
+
+const numbers = [1, 2, 3, 4];
+const squaredNumbers = numbers.map(function (value) {
+  return value * this.age; // 'this' refers to the 'person' object
+}, person);
+
+console.log(squaredNumbers);

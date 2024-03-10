@@ -42,10 +42,8 @@ console.log("finalComposeForLoop", finalComposeForLoop);
 
 function compose(allFun) {
   return function (x) {
-    console.log("x ->", x);
     let result = 0;
     for (let i = 0; i < allFun.length; i++) {
-      console.log("allFun[i](x)", allFun[i](x));
       result = result + allFun[i](x);
       console.log("res", result);
     }
@@ -58,7 +56,9 @@ let compFun = compose([add, mul, sub])(4);
 console.log("compFun", compFun);
 
 const newFunction = compose(add, mul);
+
 const result = newFunction(2);
+
 function compose(func1, func2) {
   return function (args) {
     return func1(func2(args));

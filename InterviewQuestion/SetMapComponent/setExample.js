@@ -27,15 +27,12 @@ console.log("myArr", newSet1);
 //has funtion
 console.log("Has function ->", newSet1.has(1));
 
-let obj = [
-  {
-    name: "Juhi",
-  },
-  {
-    name: "Juhi",
-  },
-];
+const mySet = new Set([1, 2, 3, 4, 5]);
+// Using for...of loop
+for (const value of mySet) {
+  console.log(value);
+}
 
-const newSetobj = new WeakMap(obj);
-
-console.log("newSet", newSetobj);
+mySet.forEach((item) => {
+  console.log("value", item);
+});
